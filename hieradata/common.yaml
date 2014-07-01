@@ -1,0 +1,97 @@
+# Governance Registry data
+greg:
+  db_type: "mysql"
+  db_host: wso2mysql.%{::domain}
+  db_name: "odaigreg"
+  db_user: "odaigreg"
+  db_password: "odaigreg1"
+  db_tag: "greg_db"
+  is_remote: "true"
+  server_url: wso2greg.%{::domain}
+  admin_pwd: "odaiadmin1"
+
+# BAM data
+bam:
+  db_type: "mysql"
+  db_host: wso2mysql.%{::domain}
+  db_name: "odaibam"
+  db_user: "odaibam"
+  db_password: "odaibam1"
+  db_tag: "bam_db"
+  server_url: wso2bam.%{::domain}
+  analitics_tag: "analitics_bam"
+  admin_password: "odaiadmin1"
+  external_greg: "true"
+
+# API Manager data
+am:
+  db_type: "mysql"
+  db_host: wso2mysql.%{::domain}
+  db_name: "odaiam"
+  db_user: "odaiam"
+  db_password: "odaiam1"
+  db_tag: "apiman_db"
+  server_url: wso2am.%{::domain}
+
+# BPS data
+bps:
+  db_type: "mysql"
+  db_host: wso2mysql.%{::domain}
+  db_name: "odaibps"
+  db_user: "odaibps"
+  db_password: "odaibps1"
+  db_tag: "bps_db"
+  server_url: wso2bps.%{::domain}
+  admin_password: "odaiadmin1"
+
+# ESB data
+esb:
+  db_type: "mysql"
+  db_host: wso2mysql.%{::domain}
+  db_name: "odaiesb"
+  db_user: "odaiesb"
+  db_password: "odaibps1"
+  db_tag: "esb_db"
+  server_url: wso2esb.%{::domain}
+  admin_password: "odaiadmin1"
+
+# TEIID CLUSTER Ddata
+teiidjboss:
+  user_tag: "teiid_slave_user"
+  server_slave_tag: "teiid_server_slave"
+  mod_cluster_tag: "teiid_slave_cluster"
+  mod_cluster_port: "10001"
+  balancer_teiid: "teiidcluster"
+  balancer_geoserver: "geocluster"
+  balancer: "vdbcluster"
+  balancer_d2rq: "d2rqcluster"
+  balancer_group: ""
+  multicast_teiid: "230.0.1.1"
+  multicast_geo: "230.0.1.2"
+  multicast_d2rq: "230.0.1.2"
+  lbgroup_teiid: "LBGroup1-1"
+  lbgroup_geo: "LBGroup1-2"
+  lbgroup_d2rq: "LBGroup1-3"
+  
+
+# APP CLUSTER Ddata
+appjboss:
+  user_tag: "app_slave_user"
+  server_slave_tag: "app_server_slave"
+  mod_cluster_tag: "app_slave_cluster"
+  mod_cluster_port: "10101"
+  balancer: "vdbcluster"
+  balancer_group: ""
+  multicast_app: "230.0.1.1"
+  lbgroup_app: "LBGroup2-1"
+  
+  
+stomp_passwd: "csi$stomp"
+mc_security_psk: "csi$mcollective"
+mysqlsoapwd: "odaipass01soa"
+mysqlrootzabbixproxypwd: "odaipass01zp"
+mysqlzabbixproxypwd: "zabbix"
+jbossadminpwd: "opendaiadmin1!"
+jbossadminpwdbb: "opendaiadmin1!"
+jbossadminslavepwd: "opendaiadmin1!"
+jbossadminslavepwdbb: "opendaiadmin1!"

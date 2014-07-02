@@ -1,6 +1,13 @@
-:backends: yaml
+:backends: 
+  - eyaml
+  - yaml
 :yaml:
   :datadir: /etc/puppet/hiera/%{environment}/hieradata
+:eyaml:
+  :datadir: /etc/puppet/secret
+    # If using the pkcs7 encryptor (default)
+  :pkcs7_private_key: /etc/puppet/secret/private_key.pkcs7.pem
+  :pkcs7_public_key:  /etc/puppet/secret/public_key.pkcs7.pem
 :hierarchy: 
   - "%{::domain}"
   - common

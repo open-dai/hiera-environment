@@ -86,8 +86,8 @@ appjboss:
   lbgroup_app: "LBGroup2-1"
   
   
-stomp_passwd: "csi$stomp"
-mc_security_psk: "csi$mcollective"
+stomp_passwd: "mcopwd"
+mc_security_psk: "mcopwd"
 mysqlsoapwd: "odaipass01soa"
 mysqlrootzabbixproxypwd: "odaipass01zp"
 mysqlzabbixproxypwd: "zabbix"

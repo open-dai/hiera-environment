@@ -95,3 +95,4 @@ jbossadminpwd: "opendaiadmin1!"
 jbossadminpwdbb: "opendaiadmin1!"
 jbossadminslavepwd: "opendaiadmin1!"
 jbossadminslavepwdbb: "opendaiadmin1!"
+ZabbixServerIP: %{::ipaddress}
